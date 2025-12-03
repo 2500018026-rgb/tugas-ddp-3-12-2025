@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int nilai(int x, int y){
+	if(y==0)
+	return 1;
+	return x*nilai(x,y-1);
+	
+}
+int main (){
+	int x,y;
+	
+
+   cout<<"=====PERPANGKATAN====="<<endl;
+   cout<<"masukan angka        :"<<endl;
+   cin>>x;
+   cout<<"masukan pangkat      :"<<endl;
+   cin>>y;
+   
+   int hasil_dari=nilai(x,y);
+   
+   cout<<"HASIL DARI" <<x <<"^" <<y << "adalah:" << hasil_dari << endl;
+   
+   return 0;
+   
+}
