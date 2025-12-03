@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+
+int penjumlahan(int a,int b){
+	return a+b;
+}
+
+int pengurangan(int a,int b){
+	return a-b;
+}
+
+int perkalian(int a,int b){
+	return a*b;
+}
+int pembagian(int a,int b){
+	if( b==0){
+		cout << "tidak bisa dibagi dengan angka 0" <<endl;
+		return 0;
+	}
+	return a/b;
+}
+int main() {
+	int masukan_pilihan;
+	int a,b ,hasil;
+	
+	cout<<"======KALKULATOR======"<<endl;
+	cout<<"1.penjumlahan"<<endl;
+	cout<<"2.pengurangan"<<endl;
+	cout<<"3.perkalian  "<<endl;
+	cout<<"4.pembagian  "<<endl;
+	cout<<"pilihan 1-4: ";
+	cin>>masukan_pilihan;
+	
+	cout<<"masukan angka pertama:";
+	cin>>a;
+	cout<<"masukan angka kedua  :";
+	cin>>b;
+	
+	switch(masukan_pilihan){
+		case 1:
+			hasil=penjumlahan(a,b);
+			break;
+		case 2:
+			hasil=pengurangan(a,b);
+			break;
+		case 3:
+			hasil=perkalian(a,b);
+			break;
+		case 4:
+			hasil=pembagian(a,b);
+			break;
+		default:
+		    cout<<"pilihan tidak ada/tidak bisa"<<endl;
+			return 0;
+				
+		
+	
+
+	}
+	
+	cout<<"TOTAL:"<<hasil<<endl;
+	
+	return 0;
+}
